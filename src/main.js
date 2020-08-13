@@ -12,6 +12,11 @@ const token = getQueryString('token');
 if (token) {
 	setToken(token);
 }
+
+// --** 设置根rem以及相关配置,  H5的网站的时候可以打开 **--
+import remAndPhoneConfig from './utils/remConfig';
+remAndPhoneConfig();
+
 // --** 添加全局样式 **--
 import './style/main.less';
 

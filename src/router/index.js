@@ -5,7 +5,7 @@ import { getToken } from '../utils/token';
 
 Vue.use(VueRouter);
 
-const routes = [
+let routes = [
 	{
 		path: '/',
 		name: 'home',
@@ -33,6 +33,17 @@ const routes = [
 		component: () => import(/* webpackChunkName: "register" */ '../views/register.vue')
 	}
 ];
+
+/**
+ * 查询模块,自动引入modules下边的所有路由模块
+ */
+let contexts = require.context('./modules', true, /\.js$/);
+contexts.keys().forEach(routers => {
+	// 获取路由模块数组
+	let routersEntity = contexts(routers).default;
+	// 直接合并数组，如果有重复，系统会抛出错误，在这里就不判断了
+	routes = routes.concat(routersEntity.routes);
+});
 
 const router = new VueRouter({
 	mode: 'history',
