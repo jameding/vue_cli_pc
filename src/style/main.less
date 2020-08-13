@@ -1,0 +1,145 @@
+//基础的reset样式文件
+@import './reset';
+//公共基础样式文件
+@import './public';
+
+//页面结构外层样式
+html,
+body {
+	margin: 0 auto;
+}
+.page-container {
+	padding: 0 2rem;
+}
+.font-12-17 {
+	font-size: 1.2rem;
+	line-height: 1.7rem;
+	color: #333;
+}
+.font-14-20 {
+	font-size: 1.4rem;
+	line-height: 2rem;
+	color: #333;
+}
+.font-15-21 {
+	font-size: 1.5rem;
+	line-height: 2.1rem;
+	color: #333;
+}
+.font-14-24 {
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	color: #333;
+}
+.font-16-22 {
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	color: #333;
+}
+.font-18-25 {
+	font-size: 1.8rem;
+	line-height: 2.5rem;
+	color: #333;
+}
+.font-wei {
+	font-weight: 500;
+}
+.font-bold {
+	font-weight: bold;
+}
+.font-wei-600 {
+	font-weight: 600;
+}
+.mt5 {
+	margin-top: 0.5rem;
+}
+.mt10 {
+	margin-top: 1rem;
+}
+.mt15 {
+	margin-top: 1.5rem;
+}
+.mt20 {
+	margin-top: 2rem;
+}
+.mt25 {
+	margin-top: 2rem;
+}
+.mt30 {
+	margin-top: 3rem;
+}
+.mt50 {
+	margin-top: 5rem;
+}
+.mt60 {
+	margin-top: 6rem;
+}
+.mt70 {
+	margin-top: 6rem;
+}
+.mb5 {
+	margin-bottom: 0.5rem;
+}
+.mb10 {
+	margin-bottom: 1rem;
+}
+.mb20 {
+	margin-bottom: 2rem;
+}
+.mb30 {
+	margin-bottom: 3rem;
+}
+.player-height {
+	height: 11rem;
+}
+//按钮的集中颜色状态
+.bg_blue {
+	background-color: #307bfe;
+	color: #fff;
+}
+.bg_green {
+	background-color: #00cc8c;
+	color: #fff;
+}
+.bg_red {
+	background-color: #ff3f47;
+	color: #fff;
+}
+.bg_gray {
+	background-color: #999999;
+	color: #fff;
+}
+.font_red {
+	color: #ff3f47;
+}
+//页面弹出的遮罩
+.page-mask-box {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+}
+// 过度动画，通过<transition name="fade">使用
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	opacity: 0;
+}
+.position-absolute {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.button-text {
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
