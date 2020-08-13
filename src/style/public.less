@@ -11,34 +11,24 @@
 	zoom: 1; /*为了兼容IE*/
 }
 //盒子模型
-.align-items {
+.flex-ac {
 	display: flex;
 	align-items: center;
 }
-.justify-content {
+.flex-bt {
+	justify-content: space-between;
+}
+.flex-jc {
 	display: flex;
 	justify-content: center;
 }
-.align-justify-items {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.align-justify-items-clo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-.align-justify-items-clo-lr {
+
+.flex-ajc {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	flex: 1;
-	width: 100%;
 }
-.flex-direction {
+.flex-col {
 	flex-direction: column;
 }
 .flex-1 {
@@ -114,10 +104,6 @@
 	-webkit-box-orient: vertical;
 	word-break: break-all;
 }
-// 强制换行
-.word-break {
-	word-break: break-all;
-}
 
 /* 图片背景样式 */
 .aspect-fill {
@@ -131,11 +117,21 @@
 }
 //按钮设置居中
 button {
-	.align-justify-items;
+	.flex-ac;
 	cursor: pointer;
 }
 .border {
 	border: 1px solid red;
+}
+//整页fiexd mask
+.page-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	.flex-ajc;
 }
 //解决上下居中的问题，如果flex不适合，就自动用这个
 .vertical-align {
